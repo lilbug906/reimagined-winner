@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Prompt Generator</title>
+</head>
+<body style="text-align: center; font-family: Arial, sans-serif; padding: 20px;">
+    <h1>Writing Prompt Generator</h1>
+    <p id="prompt">Click the button to generate a prompt!</p>
+    <button onclick="generatePrompt()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Generate Prompt</button>
+
+    <script>
+        const prompts = [
+            "Write about a character who discovers a secret hidden in their family history.",
+            "Describe a world where everyone has a superpower except your main character.",
+            "Write a story set in a city where it's always night.",
+            "Imagine a future where humans live on Mars. Describe a day in the life of a Mars colonist.",
+            "Write a scene between two characters who have never met before but feel like they know each other.",
+            "What would happen if time suddenly started moving backward for everyone except your main character?",
+            "Write about a day in the life of a person who can hear other people's thoughts."
+        ];
+
+        function generatePrompt() {
+            const randomIndex = Math.floor(Math.random() * prompts.length);
+            document.getElementById("prompt").innerText = prompts[randomIndex];
+        }
+    </script>
+</body>
+</html>
